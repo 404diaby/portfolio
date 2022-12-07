@@ -159,10 +159,13 @@ section p{
     background: url('https://images.unsplash.com/photo-1518799937599-77763326c394?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80') no-repeat center center/ cover;
 }
 .contact-icons a{
-    display: inline-block;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+   gap: 12px;
     text-decoration: none;
     color: white;
-    padding: 60px;
+    
 }
 .contact-icons a > i{
     font-size: 45px;

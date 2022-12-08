@@ -10,10 +10,14 @@
     color: white;
     overflow: hidden;
   }
+  a{
+    text-decoration: none;
+  }
   .container{
     width: 100%;
     height: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
    
@@ -32,7 +36,7 @@
     justify-content: space-between;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
     top: 0;
   }
   nav .mainMenu {
@@ -82,22 +86,29 @@
     margin: 6px;
     cursor: pointer;
     text-transform: uppercase;
-    color:green;
+    
   }
   /**   **/
   section{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     width: 100%;
     height: 100vh;
+    z-index: 1;
     scroll-snap-align: center;
+  }
+  /*pahse test supprimer apres*/
+  #accueil,#contacts,#projets{
 
+  
+   
+    flex-direction: column;
+   
   }
   section h1{
-    font-size: 4em;
+    font-size: 3em;
+    z-index: 2;
 }
 section p{
     font-size: 1.5em;
@@ -105,13 +116,125 @@ section p{
 #accueil{
     background: url('https://images.unsplash.com/photo-1543791187-df796fa11835?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1699&q=80') no-repeat center center/ cover;
 }
+/** section projet*/
 
-#compétences{
-    background: url('https://images.unsplash.com/photo-1543791187-df796fa11835?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1699&q=80') no-repeat center center/ cover;
+
+
+/** fin section projet**/
+
+/** section compétence*/
+
+.competence-container{
+ height: 85vh;
+ width: 100%;
+ text-align: center;
 }
+
+.competence-h{
+  padding: 50px 0 50px 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.carousel {
+ overflow: ;
+ margin: 0 60px;
+}
+
+.carousel-cell {
+  width: 700px;
+  height: 500px;
+  margin-right: 10px;
+  color: rgb(255, 123, 0);
+  border-radius: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  user-select:;
+  pointer-events: ;
+  
+  
+}
+div.carousel-cell > * {
+  margin: auto;
+ background-color: ;
+  width: 50%;
+  overflow: hidden ;
+  max-height:100%;
+  user-select:none;
+  pointer-events: none;
+  
+  
+}
+
+div.carousel-cell > * {
+ opacity: 0;
+}
+.carousel-cell.is-selected > * {
+  opacity: 1;
+}
+
+/* position dots up a bit */
+.flickity-page-dots {
+ display: none;
+}
+
+/* smaller, dark, rounded square */
+.flickity-prev-next-button {
+  
+  display: none;
+}
+
+
+/*
+.carousel-cell {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: no-repeat;
+  margin-right: 10px;
+  background-position: center center;
+  z-index: 3; 
+}
+
+.carousel-cell::before {
+  display:block;
+  content:"";
+}
+*/
+
+
+/*
+.flickity-button:hover {
+  background: blue;
+}*/
+/*
+.flickity-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #19F;
+}
+*/
+/*
+.flickity-page-dots .dot.is-selected {
+  background: blue;
+}
+*/
+/** fin section compétence **/
 /** section veille  **/
+.veille-container{
+  background: rgba(255, 181, 112, 0.9);
+
+  width: 100%;
+  height: 85vh;
+}
+
+#veille p{
+  margin-bottom: 60px;
+  
+}
 #veille h1{
     text-transform: uppercase;
+    margin-bottom:15px ;  
 }
  .btn-veille{
     letter-spacing: 4px;
@@ -122,6 +245,7 @@ section p{
     padding: 12px 20px;
     text-transform: uppercase;
    font-family: "montserrat", sans-serif;
+   font-weight: bold;
     background: none;
     border:2px solid #212f77;
     transition: ease-out 0.3s;
@@ -144,7 +268,7 @@ section p{
     height: 100%;
     background: #fff;
     z-index: -1;
-   
+    font-weight: bold;
     transition: transform 0.5s;
     transform-origin: 0 0;
     transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
@@ -155,15 +279,26 @@ section p{
     transform: scaleY(1);
 }
 
+/** fin section veille**/
 /** section contact  **/
 #contacts{
     background: url('https://images.unsplash.com/photo-1518799937599-77763326c394?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80') no-repeat center center/ cover;
 }
-.contact-icons a{
-    display: inline-flex;
+#contacts h1{
+  margin-bottom:30px ;  
+
+}
+.contact-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     flex-wrap: nowrap;
-    justify-content: center;
-   gap: 12px;
+    
+     gap: 50px;
+}
+.contact-icons a
+{
+  
     text-decoration: none;
     color: white;
     
@@ -171,10 +306,10 @@ section p{
 .contact-icons a > i{
     font-size: 45px;
 }
-
+/*
 .fa-5 {
 	font-size: 8em;
-}
+}*/
 
 
 
@@ -193,9 +328,12 @@ section p{
 
 
 .copyright{
+  /** fix een bottom**/
+    
     display: block;
     font-size:0.8em;
     font-style: italic;
+    
     color: rgba(41, 39, 39, 0.979);
     
 }
@@ -233,4 +371,103 @@ section p{
       display: inline-block;
       padding: 12px;
     }
+    
+    
+.slider  {
+  
+  margin: 0 20px;
+  width: 90%;
+  
+  display: flex;
+  overflow-x: scroll;
+  gap:20px;
+  scroll-snap-type: x mandatory;
+  -ms-verrflow-style:none;
+  overflow: -moz-scrollbar;
+  border-radius:10px;
+  box-shadow: 0px 0px 80px #f3c9ff2e;
+  
+  
   }
+  
+  .slider::-webkit-scrollbar{
+    color: rebeccapurple;
+    width: 5px;
+    height: 8px;
+    background-color: #aaa;
+  
+  }
+  .slider::-webkit-scrollbar-thumb {
+    background: rgb(255, 123, 0);
+  }
+  
+  
+  
+  img{
+  
+  display: block;
+  width:150px;
+  height:150px;
+  object-fit: cover;
+  user-select:;
+  pointer-events:;
+  
+  
+  }
+  
+  .slide{
+    position:relative;
+   
+  scroll-snap-align:start;
+  width: 150px;
+  height:150px;
+  user-select:;
+  pointer-events:;
+  color:  rgb(255, 123, 0);
+  
+  
+  
+  
+  text-align: center;
+  }
+  
+  .caption{
+    display:block;
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    
+  
+    transform: translate(-50%, -50%);
+    width: 150px;
+  height:150px;
+    
+  }
+  
+  .caption a {
+    color:  rgb(255, 123, 0); ;
+  }
+  .caption-p{
+      
+      padding-top:1em;
+      width: 150px;
+  height:150px;
+     
+      
+      background: linear-gradient(180deg, rgba(10, 8, 8, 0.59) 50%, rgba(0,0,0,0) 100%);
+      overflow:hidden;
+      width: 100%;
+    transform: translateY( 0);
+    }
+  
+  
+    
+
+  }
+
+
+
+
+
+  /* https://www.youtube.com/watch?v=3Z780EOzIQs */

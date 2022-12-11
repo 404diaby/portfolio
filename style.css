@@ -23,10 +23,20 @@
    
   }
   .container{
-    background: url('aditya-chinchure-hyN9aU9Tm-c-unsplash.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url("./Cloudy-background.svg") no-repeat center center/ cover;
+  
     }
+    .container::-webkit-scrollbar{
+   
+    width: 10px;
+    height: 20px;
+    background-color: #aaa;
+  
+  }
+  .container::-webkit-scrollbar-thumb {
+    background: rgb(255, 123, 0);
+  }
+  
   nav {
 
     background: #212f77;
@@ -95,30 +105,155 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    z-index: 1;
+    z-index: ;
     scroll-snap-align: center;
   }
-  /*pahse test supprimer apres*/
-  #accueil,#contacts,#projets{
-
   
-   
-    flex-direction: column;
-   
-  }
+
+
   section h1{
     font-size: 3em;
-    z-index: 2;
+    
 }
 section p{
     font-size: 1.5em;
-}/** image  **/
-#accueil{
-    background: url('https://images.unsplash.com/photo-1543791187-df796fa11835?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1699&q=80') no-repeat center center/ cover;
 }
+section > *{
+  z-index: ;
+}
+
+
+
+/** section accueil*/
+
+#accueil{
+   
+   
+  
+    background: url('./Cloudy.svg') no-repeat center center/ cover;
+   
+    
+   
+  }
+.accueil-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 85vh;
+}
+
+
+.left-part{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-part{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  
+}
+.right-part > * {
+  width: 90%;
+}
+.LeCastel{
+  color: rgb(255, 123, 0);
+}
+.LeCastel:hover{
+  color: #212f77;
+}
+.accueil-btn{
+  display: flex;
+ justify-content: space-around;
+}
+.photo-profil{
+  width: 90%;
+  aspect-ratio:  1/ 1;
+ 
+}
+
+
+
+/** fin section accueil**/
 /** section projet*/
 
 
+.projets-container{
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 85vh;
+ 
+
+}
+.projets-title{
+  text-transform: uppercase;
+}
+
+
+.projets-menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 60px;
+}
+.projets-menu ul li {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  padding: 5px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.projets-items {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+.projets-items::-webkit-scrollbar{
+   
+  width: 15px;
+  height: 8px;
+  background-color: #aaa;
+
+}
+.projets-items::-webkit-scrollbar-thumb {
+  background: rgb(255, 123, 0);
+}
+
+.item {
+  width: 32%;
+  aspect-ratio: 1/1;
+  border: rgb(255, 123, 0);
+  position: relative;
+  overflow: hidden;
+  margin: 0  1%  1%  0;
+  
+  background-color: green; 
+}
+
+.item:hover .portfolio-overlay {
+  top: 0;
+}
+.item-menu ul li.active {
+	background-color: rgb(40, 60, 238);
+	color: rgb(177, 34, 122);
+}
 
 /** fin section projet**/
 
@@ -132,12 +267,12 @@ section p{
 
 .competence-h{
   padding: 50px 0 50px 0;
-  text-transform: uppercase;
+  text-transform: uppercase; color:rgb(255, 123, 0);
   letter-spacing: 4px;
 }
 
 .carousel {
- overflow: ;
+ 
  margin: 0 60px;
 }
 
@@ -150,14 +285,11 @@ section p{
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-  user-select:;
-  pointer-events: ;
   
   
 }
 div.carousel-cell > * {
   margin: auto;
- background-color: ;
   width: 50%;
   overflow: hidden ;
   max-height:100%;
@@ -221,20 +353,30 @@ div.carousel-cell > * {
 */
 /** fin section compétence **/
 /** section veille  **/
+
 .veille-container{
   background: rgba(255, 181, 112, 0.9);
 
   width: 100%;
   height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-#veille p{
-  margin-bottom: 60px;
-  
+#veille-title{
+   text-transform: uppercase;
 }
-#veille h1{
-    text-transform: uppercase;
-    margin-bottom:15px ;  
+
+#veille-content{
+  display: flex;
+  width: 90%;
+}
+
+#veille-btn{
+  display: flex;
+  gap: 40px;
 }
  .btn-veille{
     letter-spacing: 4px;
@@ -282,8 +424,26 @@ div.carousel-cell > * {
 /** fin section veille**/
 /** section contact  **/
 #contacts{
-    background: url('https://images.unsplash.com/photo-1518799937599-77763326c394?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80') no-repeat center center/ cover;
+    
+   background: url('./Cloudy2.svg') no-repeat center center/ cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
+
+.contacts-container{
+ 
+
+  width: 100%;
+  height: 85vh;
+  display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   flex-direction: column;
+ 
+  
+}
+
 #contacts h1{
   margin-bottom:30px ;  
 
@@ -334,7 +494,7 @@ div.carousel-cell > * {
     font-size:0.8em;
     font-style: italic;
     
-    color: rgba(41, 39, 39, 0.979);
+    color: rgb(255, 123, 0)
     
 }
   @media (max-width: 800px) {
@@ -391,7 +551,7 @@ div.carousel-cell > * {
   }
   
   .slider::-webkit-scrollbar{
-    color: rebeccapurple;
+   
     width: 5px;
     height: 8px;
     background-color: #aaa;

@@ -17,6 +17,7 @@
             <div class="openMenu"><i class="fa fa-bars"></i></div>
             <ul class="mainMenu">
                 <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#projets">Parcours</a></li>
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#veille">Veille</a></li>
@@ -29,14 +30,68 @@
                 </span>
             </ul>
         </nav>
+          <!-------------------- Partie Accueil ------------------------>
         <section id="accueil">
-            <h1>Website</h1>
-            <p>blmfsdfsdofnqsisgfhiusgfiuys</p>
+            <div class="accueil-container">
+                <div class="left-part">
+                     <img class="photo-profil" src="./photo7.jpg">
+                </div>
+               
+                <div class="right-part">
+                    <h1>DIABY Mamadou</h1>
+                        <p>Titulaire d'un Baccalauréat STI2D (Sciences et Technologies de L’industrie et du Développement Durable).  <br>Je suis actuellement un étudiant de 2e année
+                            d'un BTS Services Informatiques aux Organisations Option : Solutions Logicielles et Applications Métier au lycée
+                            <a href="https://lyc-lecastel-dijon.eclat-bfc.fr/"><span class="LeCastel">Le Castel</span></a> à Dijon. 
+                            <br>Je souhaiterais par la suite m'orienter vers une Licence Profession.
+                            <br>Dans le cadre de mon BTS , je dois effectuer un stage non-rémunéré du 20 février 2023 au 24 mars 2023.
+                            Je suis donc activement à la recherche d'un stage. 
+                    </p>
+                    <div class="accueil-btn">
+                        <a class="btn-veille" href="./DIABY_Mamadou_CV.pdf" >curriculum vitae</a>
+                        <a class="btn-veille" href="./DIABY_Mamadou_LM.pdf" >Lettre de motivation</a>
+                    </div>
+                </div>
+                
+            </div>
+            
         </section>
         <!-------------------- Partie Projets------------------------>
         <section id="projets">
-            <h1>projet</h1>
-            <p>blmfsdfsdofnqsisgfhiusgfiuys</p>
+            <div class="projets-container">
+               
+
+                <h1 class="projets-title">projet</h1>
+                <div  class="projets-menu">  
+                    <ul>
+                        <li class="active" data-filter="*"> ALL</li>
+                        <li data-filter=".php">PHP</li>
+                        <li data-filter=".c">C#</li>
+                    </ul>
+                    
+                </div>
+            
+            
+                <div class="projets-items">
+                    <div class="item php" >
+                       <p> 1</p>
+                    </div>
+                    <div class="item c"  >
+                        <p> 2</p>
+                    </div>
+                    <div class="item php" >
+                        <p> 1</p>
+                    </div>
+                    <div class="item c"  >
+                        <p> 2</p>
+                    </div>
+                    <div class="item"  >
+                        <p> 3</p>
+                    </div>
+                    
+                    
+                     
+                </div>
+            </div>  
             <!-------------------- Partie Projets--
 			<div class="slider">
                 <div class="slide">
@@ -91,7 +146,7 @@
    
             ---------------------->
             
-
+            
         </section>  
         <!-------------------- Partie Compétence  ------------------------>
         <section id="competences">
@@ -191,19 +246,50 @@
                         </div>
                     </div>
                 </div>
+                <div class="keys">Fait glisser la carte</div>
             </div>
         
         
-   
+            
         </section>
 
          <!-------------------- Partie contact ------------------------>
 
         <section id="veille">
             <div class="veille-container">
-                 <h1>veille</h1><p>Ma veille technonologie se passe ici. J'y explique tout mon procédé.</p>
-                <a class="btn-veille" href="./veille.html" >Voir</a>
-            
+                <h1 id="veille-title">veille</h1>
+                <div id="veille-content"> 
+                    <div id="left-part">
+                        <h3>Mise en place</h3>
+                       <p>Ma veille technonologie se passe ici. J'y explique tout mon procédé.
+                        Et Epigonus quidem amictu tenus philosophus, ut apparuit, prece frustra 
+                        temptata, sulcatis lateribus mortisque metu admoto turpi confessione cogitatorum 
+                        socium, quae nulla erant, fuisse firmavit cum nec vidisset quicquam nec audisset 
+                        penitus expers forensium rerum; Eusebius vero obiecta fidentius negans, suspensus 
+                        in eodem gradu constantiae stetit latrocinium illud esse, non iudicium clamans.
+                       </p>
+                
+                    </div>
+                    <div id="right-part">
+                        <h3>Thème aborder</h3>
+                        <p>
+                            Et Epigonus quidem amictu tenus philosophus, ut apparuit, prece 
+                            frustra temptata, sulcatis lateribu
+                            s mortisque metu admoto turpi confessione cogitatorum socium,
+                             quae nulla erant, fuisse firmavit cum nec vidisset quicquam nec
+                              audisset penitus expers forensium rerum; Eusebius vero obiecta
+                               fidentius negans, suspensus in eodem gradu constantiae stetit 
+                               latrocinium illud esse, non iudicium clamans.
+                        </p>
+                    </div>
+                    
+                </div>
+                <div id="veille-btn">
+                    <a class="btn-veille" href="https://404diaby.blogspot.com/" >Blog</a>
+                    <a class="btn-veille" href="https://404diaby.blogspot.com/" >Voir</a>
+                </div>
+                 
+                
             </div>
            
             
@@ -211,24 +297,45 @@
         </section>
         <!-------------------- Partie contact ------------------------>
         <section id="contacts">
-            <h1>CONTACTS</h1>
-            <div class="arr"></div>
-            <span class="contact-icons">
-                <a href="mailto:mamadou.dby@outlook.fr"><i class="fas fa-at" ></i></a>
-                <a href="https://github.fr/404diaby"><i class="fab fa-github"></i></a>
-                <a  href="https://www.linkedin.com/in/mamadou-diaby-107351231/?original_referer=" target="_blank"><i class="fab fa-linkedin" ></i></a>
-                
-            </span>
-            <p class="copyright">Diaby Mamadou © 2022 Tous droits réservés</p>
-                
+            <div class="contacts-container">
+                <h1>CONTACTS</h1>
+                <div class="arr"></div>
+                <span class="contact-icons">
+                    <a href="mailto:mamadou.dby@outlook.fr"><i class="fas fa-at" ></i></a>
+                    <a href="https://github.fr/404diaby"><i class="fab fa-github"></i></a>
+                    <a  href="https://www.linkedin.com/in/mamadou-diaby-107351231/?original_referer=" target="_blank"><i class="fab fa-linkedin" ></i></a>
                     
+                </span>
+                
+                 <img class="hand-image" src="Hands_-_Show.png">
+                 <p class="copyright">Diaby Mamadou © 2022 Tous droits réservés</p>
+            </div>
+           
             
         </section>
     </div>
     <script src="./hamburger.js"></script>
+    <script src="./projets.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="./jquery.min.js"></script>
+    <script src="./isotope.min.js"></script>
     <script>
-        /*alert('Bonjours, Merci de consulter mon portfolio.\nJe tien à precisé qu\'il est toujourd en construction');*/
+        alert('Bonjours, Merci de consulter mon portfolio.\nJe tien à precisé qu\'il est toujourd en construction');
+       // init Isotope
+       var $grid = $('.projets-items').isotope({
+            // options
+            });
+            // filter items on button click
+            $('.projets-menu ul').on( 'click', 'li', function() {
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+            });
+    
+            $('.projets-menu ul').on( 'click', 'li', function() {
+                $(this).siblings(".active").removeClass('active');
+                $(this).addClass("active");
+            });
     </script>
+       
 </body>
 </html>
